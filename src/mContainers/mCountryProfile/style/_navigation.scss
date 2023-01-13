@@ -1,0 +1,148 @@
+.country-profile-page, .nav-wrapper {
+  .navigation {
+    padding-bottom: 10px;
+    padding-top: 16px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #0b3f3f;
+    a {
+      color: #a0abab;
+      font-size: 14px;
+      text-decoration: none;
+      i {
+        font-size: 20px;
+        &:before {
+          color: #fff;
+        }
+      }
+
+      .icon-back-arrow {
+        color: #fff;
+        position: relative;
+        top: 4px;
+      }
+    }
+
+    .actions {
+      .close-button {
+        position: absolute;
+        top: 15px;
+      }
+      img {
+        height: 16px;
+      }
+      a {
+        //margin-left: 24px;
+      }
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .country-profile-page-desktop, .nav-wrapper-desktop {
+    .navigation {
+      .actions {
+        min-width: 175px;
+
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .country-profile-mobile {
+    .navigation {
+      .actions {
+        margin-left: 32px;
+      }
+    }
+  }
+  .country-profile-page, .nav-wrapper {
+    .navigation {
+      a {
+        img {
+          margin-left: 8px;
+          width: 24px;
+        }
+
+        .icon-back-arrow {
+          margin-left: 5px;
+        }
+      }
+
+      .actions {
+        //margin-left: 40px !important;
+        margin-right: 20px !important;
+        float: left;
+
+        .close-button {
+          left: 15px;
+        }
+        .langTextFontM {
+          margin-right: 8px;
+          display: inline-block;
+          color: #fff;
+          cursor: pointer;
+        }
+        a {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .country-profile-page-desktop, .nav-wrapper-desktop {
+    .navigation {
+      .actions {
+        text-align: right;
+        min-width: 175px;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .country-profile-mobile {
+    .navigation {
+      .actions {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  .country-profile-page, .nav-wrapper {
+    .navigation {
+      a {
+        img {
+          margin-right: 8px;
+          width: 24px;
+        }
+
+        .icon-back-arrow {
+          margin-right: 5px;
+        }
+      }
+
+      .actions {
+        //margin-right: 40px !important;
+        float: right;
+        .close-button {
+          right: 15px;
+        }
+        .langTextFontM {
+          display: inline-block;
+          color: #fff;
+          cursor: pointer;
+          margin-top: -3px;
+          margin-left: 12px;
+        }
+        a {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

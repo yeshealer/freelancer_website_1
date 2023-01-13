@@ -1,0 +1,159 @@
+// Mobile Menu
+.mobileMenuWrapperM {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+  display: flex;
+
+  flex-direction: row;
+
+  .mobileMenuGapM {
+    display: flex;
+    width: 20%;
+  }
+
+  .mobileMenuM {
+    height: 100%;
+    width: 80%;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    .bottomBorderM {
+      border-bottom: 1px solid #212121;
+    }
+
+    .logoM {
+      padding: 0px 20px;
+      img {
+        //width: 50%;
+        height: 100px;
+      }
+    }
+
+    .menuItemM {
+      cursor: pointer;
+      padding-top: 18px !important;
+      padding-bottom: 17px !important;
+
+      &.activeItemM {
+        //color: #19a981 !important;
+      }
+
+      .menuIcon {
+        &.marginTop {
+          margin-top: 3px;
+        }
+      }
+
+      .menuText {
+        color: #fff;
+        max-width: 220px;
+
+        > span {
+          font-weight: normal;
+          margin-top: 5px;
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.6);
+          font-style: italic;
+          display: block;
+        }
+      }
+
+    }
+
+    .bottomItemM {
+      margin-top: auto;
+      display: flex;
+      padding: 0 20px 15px 20px;
+
+      .aboutIconM {
+        display: inline-block;
+        vertical-align: middle;
+        //margin-right: 20px;
+        //margin-left: 20px;
+        margin-top: -5px;
+      }
+
+      .bottomSubItem {
+        cursor: pointer;
+        //margin-right: 20px;
+        //flex: 1;
+        //text-align: center;
+      }
+    }
+  }
+}
+
+.mobileMenuMode {
+  z-index: 101;
+}
+
+.desktopMenuMode {
+  z-index: 94;
+
+  .mobileMenuM {
+    background: #111111 !important;
+  }
+  .bottomItemM {
+    margin-bottom: 64px;
+  }
+}
+
+html[dir='rtl'] {
+  // Mobile Menu
+  .mobileMenuWrapperM {
+    right: -100%;
+    &.showM {
+      animation: slideMenuRTLM 0.5s forwards;
+    }
+
+    &.hideM {
+      animation: slideBackMenuRTLM 0.5s forwards;
+    }
+    .menuItemM {
+      padding: 20px 20px 20px 0;
+
+      .menuIcon {
+        float: right;
+        margin-left: 20px;
+      }
+
+      .menuText {
+        float: right;
+      }
+    }
+  }
+}
+
+html[dir='ltr'] {
+  // Mobile Menu
+  .mobileMenuWrapperM {
+    left: -100%;
+    &.showM {
+      animation: slideMenuLTRM 0.5s forwards;
+    }
+
+    &.hideM {
+      animation: slideBackMenuLTRM 0.5s forwards;
+    }
+    .menuItemM {
+      padding: 20px 0 20px 20px;
+
+      .menuIcon {
+        float: left;
+        margin-right: 20px;
+      }
+
+      .menuText {
+        float: left;
+      }
+    }
+  }
+}

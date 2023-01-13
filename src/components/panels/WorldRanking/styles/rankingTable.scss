@@ -1,0 +1,200 @@
+
+.global-ranking-tableM .react-bs-table-container {
+  position: relative;
+}
+
+.global-ranking-tableM .react-bs-table-container .table-bordered > tbody > tr > td, .global-ranking-tableM .react-bs-table-container .table-bordered > tbody > tr > th,
+.global-ranking-tableM .react-bs-table-container .table-bordered > tfoot > tr > td, .global-ranking-tableM .react-bs-table-container.table-bordered > tfoot > tr > th,
+.global-ranking-tableM .react-bs-table-container .table-bordered > thead > tr > td, .global-ranking-tableM .react-bs-table-container .table-bordered > thead > tr > th {
+  border: none;
+
+}
+
+.global-ranking-tableM .react-bs-table-container .table-bordered > thead > tr > th {
+  cursor: pointer;
+}
+
+.global-ranking-tableM .react-bs-table-container .table-bordered {
+  border: none;
+}
+
+.global-ranking-tableM .react-bs-table-container table tr:nth-child(odd) {
+  background: transparent;
+  border: 0px;
+}
+
+.global-ranking-tableM .react-bs-table-container table tr:nth-child(even) {
+  background: transparent;
+  border: 0px;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table {
+  margin-bottom: 0px;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > tr > th:nth-child(odd) {
+  text-align: left !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > tr > th:nth-child(even) {
+  text-align: right !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 5px;
+  padding-right: 0px;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(2),
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(3) {
+  //padding: 0px !important;
+  color: #565252;
+  //width: 120px;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(3) {
+  cursor: default !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(1) {
+  //padding: 0px !important;
+  color: #565252;
+  //width: 30%;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > colgroup > col:nth-child(1) {
+  //min-width: 29% !important;
+  //width:29% !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > tbody > tr > td {
+  color: #a49b9b;
+  font-size: 14px;
+  //word-wrap: break-word;
+  white-space: normal;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .dropdown .caret,
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .dropup .caret,
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .caret {
+  margin: 0px !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .dropdown,
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .dropup {
+  position: absolute;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .dropdown .caret {
+  margin-top: 6px !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th .order .dropup .caret {
+  margin-bottom: 9px !important;
+}
+
+/*------------END:  world ranking table css  -----*/
+
+.global-ranking-tableM .section .Select-clear-zone {
+  display: none;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body::-webkit-scrollbar,
+.Accordion-sub-Pillar-data::-webkit-scrollbar, .accordion-sub-pillars::-webkit-scrollbar {
+  width: 7px;
+  color: #fff;
+  opacity: 0.2;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > tbody > tr > td:nth-child(2):lang(ar),
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > tbody > tr > td:nth-child(1):lang(ar) {
+  text-align: right !important;
+}
+
+
+.react-bs-table .table .sort-column .order {
+  padding-left: 5px;
+}
+
+.react-bs-table .table .sort-column .order:lang(ar) {
+  padding-right: 5px;
+}
+
+// AR
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > tbody > tr > td:nth-child(2):lang(ar) {
+  //padding-right: 30px !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(1):lang(ar) {
+  //padding: 0px !important;
+  color: #565252;
+  //width: 30%;
+  text-align: right !important;
+  //padding-right: 0px !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > colgroup > col:nth-child(1):lang(ar) {
+  min-width: 24% !important;
+  width: 24% !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(2):lang(ar) {
+  //padding: 0px !important;
+  color: #565252;
+  /* width: 120px; */
+  text-align: right !important;
+  //padding-right: 10px !important;
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(2):lang(ar) {
+  padding-right: 6px !important;
+
+}
+
+.global-ranking-tableM .react-bs-table .react-bs-container-header table > thead > tr > th:nth-child(3):lang(ar) {
+  //padding: 0px !important;
+  color: #565252;
+  /* width: 120px; */
+  text-align: left !important;
+  //padding-left: 10px !important;
+  //padding-right: 10px !important;
+  cursor: default !important;
+  padding-left: 12px !important;
+}
+
+.global-ranking-tableM table > tbody > tr > td:nth-child(3):lang(ar) {
+  text-align: left !important;
+}
+
+
+.global-ranking-tableM .react-bs-table .react-bs-container-body table > tbody > tr > td {
+  //padding-right: 0 !important;
+  //padding-left: 0 !important;
+  outline: none;
+}
+
+// AR
+
+.global-ranking-tableM th {
+  width: 30%;
+  padding: 0 8px !important;
+}
+
+.global-ranking-tableM td {
+  width: 30%;
+  padding: 8px 8px 8px 8px !important;
+}
+
+.nodatahyphen {
+  font-weight: bold;
+  text-align: right;
+}
+
+.nodatahyphen-ar {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+}

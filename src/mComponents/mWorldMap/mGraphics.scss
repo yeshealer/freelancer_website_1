@@ -1,0 +1,29 @@
+.graph-wrapper {
+  position: relative;
+
+  .denominator-name {
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 280px;
+    top: 178px;
+    text-align: center;
+  }
+}
+
+html[dir='rtl'] {
+  .graph-wrapper {
+    padding-right: 58px;
+    .denominator-name {
+      right: -112px;
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .graph-wrapper {
+    padding-left: 58px;
+    .denominator-name {
+      left: -112px;
+    }
+  }
+}

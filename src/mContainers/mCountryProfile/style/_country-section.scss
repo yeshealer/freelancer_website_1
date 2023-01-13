@@ -1,0 +1,66 @@
+.country-profile-page {
+  .country-section {
+    width: calc(#{$pillar-panel-width-open} - 30px - 30px - 15px);
+
+    > div{
+      flex-direction: row;
+      display: flex;
+      height: 40px;
+      margin-bottom: 40px;
+
+    }
+
+    .flag {
+      display: flex;
+      width: 70px;
+    }
+
+    .name {
+      align-self: center;
+      display: flex;
+      flex: 1;
+      text-transform: uppercase;
+      color: #fff;
+      //font-family: Etelka-Light, sans-serif;
+      font-size: 25px;
+      font-weight: 100;
+      letter-spacing: 3px;
+    }
+
+    .country-map {
+      //width: 280px;
+      //color: #ccc;
+      //font-size: 1em;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 0 10px #000;
+      font-size: 150px;
+      text-align: center;
+      //transform: translateX(30%);
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .country-profile-page {
+    .country-section {
+      margin-right: 15px;
+      // margin-top: 70px;
+
+      .flag {
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .country-profile-page {
+    .country-section {
+      margin-left: 15px;
+
+      .flag {
+        margin-left: 24px;
+      }
+    }
+  }
+}

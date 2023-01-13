@@ -1,0 +1,198 @@
+// Header
+.mapHeaderM {
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 8px;
+  background-color: rgba(34, 34, 34, 0.6);
+  background: linear-gradient(to bottom, rgba(34, 34, 34, 1) 0%, rgba(34, 34, 34, 0.3) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222222', endColorstr='#222222', GradientType=0);
+
+  display: flex;
+
+  align-items: center;
+  //justify-content: center;
+
+  .logoM {
+    width: 16.666666666%;
+    img {
+      height: 110px;
+    }
+  }
+
+  .hamburgerMenuM {
+    display: none;
+  }
+
+  .staticMenu {
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .menuM {
+      .itemH2M {
+        font-size: 10px !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1025px) {
+    .menuM {
+      display: none !important;
+    }
+
+    .hamburgerMenuM {
+      z-index: 95;
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+  .menuM {
+    color: #fff;
+    display: flex;
+
+    .secondMenu {
+      display: flex;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .menuItemStaticM {
+        .menuIconM {
+          margin: 0 !important;
+        }
+      }
+
+      .iconMenuItem {
+        .menuIconM {
+          margin-right: 0 !important;
+          margin-left: 0 !important;
+        }
+        .itemTextM {
+          display: none;
+        }
+      }
+    }
+
+    .menuItemStaticM {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      opacity: 0.75;
+
+      color: #fff;
+      text-decoration: none;
+
+      .menuIconM {
+      }
+
+      .itemH1M {
+        font-size: 15px;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+
+    .menuItemM {
+      display: flex;
+      cursor: pointer;
+      align-self: flex-start;
+      opacity: 0.7;
+
+      a{
+        display: flex;
+        align-self: flex-start;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .menuIconM {
+        opacity: 0.7;
+      }
+
+      .itemH1M {
+        font-size: 15px;
+      }
+
+      .itemH2M {
+        opacity: 0.7;
+        font-size: 12px;
+        font-style: italic;
+      }
+
+      &.active,
+      &:hover {
+        opacity: 1;
+
+        .menuIconM {
+          opacity: 1;
+        }
+
+        .itemH2M {
+          color: #19a981 !important;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .mapHeaderM {
+    .staticMenu {
+      margin-right: auto;
+    }
+    .menuM {
+      .secondMenu {
+        margin-right: 24px;
+      }
+      // margin-right: 5%;
+      .menuItemStaticM {
+        .menuIconM {
+          margin-left: 8px;
+        }
+        margin-left: 16px;
+      }
+      .menuItemM {
+        margin-left: 26px;
+        .menuIconM {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .mapHeaderM {
+    .staticMenu {
+      margin-left: auto;
+    }
+    .langTextFontM {
+      font-family: ITCHandel;
+      margin-top: -6px;
+    }
+    .menuM {
+      // margin-left: 5%;
+      .menuItemStaticM {
+        .menuIconM {
+          margin-right: 8px;
+        }
+        margin-right: 16px;
+
+      }
+      .menuItemM {
+        margin-right: 26px;
+        .menuIconM {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+}

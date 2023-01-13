@@ -1,0 +1,42 @@
+.graph-wrapper {
+  position: relative;
+
+  .denominator-name {
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 280px;
+    top: 178px;
+    text-align: center;
+  }
+}
+
+
+html[dir='rtl'] {
+  .mobileModeModal{
+    .graph-wrapper{
+      padding: 0 0 0 20px !important;
+    }
+  }
+
+  .graph-wrapper {
+    padding-right: 58px;
+    .denominator-name {
+      right: -112px;
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .mobileModeModal{
+    .graph-wrapper{
+      padding: 0 20px 0 0 !important;
+    }
+  }
+
+  .graph-wrapper {
+    padding-left: 58px;
+    .denominator-name {
+      left: -112px;
+    }
+  }
+}

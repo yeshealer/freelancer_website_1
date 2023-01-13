@@ -1,0 +1,398 @@
+.wizardMobile {
+  .searchButtonCountryM {
+    display: none !important;
+  }
+  .searchCountryContentM {
+    background: #000;
+    display: block;
+    padding: 0 5px 5px 5px;
+    img {
+      margin-top: 5px;
+      flex: 1;
+      width: 36px;
+      float: left;
+    }
+
+    input {
+      height: 40px !important;
+      width: 100px;
+      background: none;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  .middleM {
+    h1 {
+      font-size: 36px !important;
+    }
+    p {
+      color: #949494 !important;
+      font-size: 15px;
+      opacity: 1 !important;
+    }
+  }
+  .subPillarsContainerM {
+    .subPillarM {
+      > p {
+        color: #949494 !important;
+        opacity: 1 !important;
+      }
+    }
+    .middleM {
+      height: 50px !important;
+      max-height: 50px !important;
+      min-height: 50px !important;
+
+      h1 {
+        font-size: 36px !important;
+      }
+    }
+    .bottomM .subPillarM .subPillarListM {
+      line-height: 38px !important;
+    }
+  }
+}
+
+.imageHolderM{
+  align-self: center;
+}
+
+.wizardDesktop {
+  .searchCountryContentM {
+    border: 1px solid #13a287;
+    background: #000;
+    position: absolute;
+    top: 8px;
+    padding: 2px;
+
+    img {
+      width: 30px;
+    }
+
+    input {
+      width: 260px;
+      background: none;
+      //float: left;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 16px;
+      margin-top: 4px;
+    }
+  }
+
+  .middleM {
+    h1 {
+      //font-size: 24px !important;
+    }
+  }
+
+  .subPillarsContainerM {
+    .subPillarM {
+      > p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.subPillarListM {
+  button {
+    width: 100% !important;
+    height: auto;
+    margin-bottom: 10px !important;
+
+    p {
+      display: inline-block;
+      &.active {
+        color: #01ae84;
+      }
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .stepContentM {
+
+  }
+
+  .wizardDesktop {
+    .middleM {
+      h1 {
+        font-size: 24px !important;
+      }
+      > p {
+        font-size: 14px !important;
+      }
+    }
+
+    .subPillarM {
+      button {
+        > p {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+
+  .bottomM {
+    button {
+      width: 50%;
+      flex: none;
+      .textHolderM p {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+  .stepContentM {
+
+  }
+
+  .wizardDesktop {
+    .middleM {
+      h1 {
+        font-size: 24px !important;
+      }
+    }
+  }
+
+  .bottomM {
+    button {
+      margin-bottom: 30px;
+      width: 33.333333%;
+      flex: none;
+      .imageHolderM div {
+        opacity: 1 !important;
+      }
+      .textHolderM p {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .wizardDesktop {
+    .middleM {
+      h1 {
+        font-size: 30px !important;
+      }
+    }
+  }
+
+  .bottomM {
+    button {
+      margin-bottom: 30px;
+      width: 25%;
+      flex: none;
+      .imageHolderM div {
+        opacity: 1 !important;
+      }
+      .textHolderM p {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+
+html[dir="ltr"] {
+  .searchButtonCountryM {
+    right: 60px;
+  }
+
+  .wizardDesktop {
+    .searchCountryContentM {
+      right: 60px;
+      img {
+        float: left;
+      }
+      input {
+        float: left;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .stepContentM {
+      padding-left: 40px;
+    }
+  }
+
+  .subPillarListM {
+    button {
+      text-align: left;
+    }
+  }
+}
+
+html[dir="rtl"] {
+  .searchButtonCountryM {
+    left: 60px;
+  }
+
+  .wizardDesktop {
+    .searchCountryContentM {
+      left: 60px;
+      img {
+        float: right;
+      }
+      input {
+        float: right;
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .wizardDesktop {
+      .stepContentM {
+        padding-right: 100px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .stepContentM {
+      padding-right: 140px;
+    }
+  }
+
+  .subPillarListM {
+    button {
+      text-align: right;
+    }
+  }
+}
+
+.bottomM {
+  button {
+    &:hover {
+
+      p {
+        color: #01ae84 !important;
+      }
+      .Education {
+        background: url('/assets/svg/education-green.svg') no-repeat !important;
+      }
+      .Energy {
+        background: url('/assets/svg/energy-green.svg') no-repeat !important;
+      }
+      .Economy {
+        background: url('/assets/svg/economy-green.svg') no-repeat !important
+      }
+      .Finance {
+        background: url('/assets/svg/finance-green.svg') no-repeat !important;
+      }
+      .Health {
+        background: url('/assets/svg/health-green.svg') no-repeat !important
+      }
+      .Industry {
+        background: url('/assets/svg/industry-green.svg') no-repeat !important;
+      }
+      .Infrastructure {
+        background: url('/assets/svg/infrastructure-green.svg') no-repeat !important;
+      }
+      .Labor {
+        background: url('/assets/svg/labor-green.svg') no-repeat !important;
+      }
+      .Security {
+        background: url('/assets/svg/security-green.svg') no-repeat !important;
+      }
+      .Justice {
+        background: url('/assets/svg/justice-green.svg') no-repeat !important;
+      }
+      .Social {
+        background: url('/assets/svg/social-green.svg') no-repeat !important;
+      }
+      .Technology {
+        background: url('/assets/svg/technology-green.svg') no-repeat !important;
+      }
+      .SDG1 {
+        background: url('/assets/icons/sdgs/[SDG 1] End Poverty-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG2 {
+        background: url('/assets/icons/sdgs/[SDG 2] End Hunger-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG3 {
+        background: url('/assets/icons/sdgs/[SDG 3] Good Health and Well-being-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG4 {
+        background: url('/assets/icons/sdgs/[SDG 4] Quality Education-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG5 {
+        background: url('/assets/icons/sdgs/[SDG 5] Gender Equality-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG6 {
+        background: url('/assets/icons/sdgs/[SDG 6] Clean Water and Sanitation-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG7 {
+        background: url('/assets/icons/sdgs/[SDG 7] Affordable and Clean Energy-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG8 {
+        background: url('/assets/icons/sdgs/[SDG 8] Decent Work and Economic Growth-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG9 {
+        background: url('/assets/icons/sdgs/[SDG 9] Industry, Innovation and Infrastructure-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG10 {
+        background: url('/assets/icons/sdgs/[SDG 10] Reduced Inequality-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG11 {
+        background: url('/assets/icons/sdgs/[SDG 11] Sustainable Cities and Communities-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG12 {
+        background: url('/assets/icons/sdgs/[SDG 12] Responsible Consumption and Production-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG13 {
+        background: url('/assets/icons/sdgs/[SDG 13] Climate Action-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG14 {
+        background: url('/assets/icons/sdgs/[SDG 14] Life Below Water-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG15 {
+        background: url('/assets/icons/sdgs/[SDG 15] Life on Land-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG16 {
+        background: url('/assets/icons/sdgs/[SDG 16] Peace and Justice Strong Institutions-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+      .SDG17 {
+        background: url('/assets/icons/sdgs/[SDG 17] Partnerships to achieve the Goal-green.png') no-repeat !important;
+        background-size: contain !important;
+      }
+    }
+  }
+}
+
+.searchButtonCountryM {
+  top: -20px;
+  position: absolute;
+}
+
+.react-tabs__tab-list {
+  width: 100%;
+}

@@ -1,0 +1,1496 @@
+@import '../../mCommons/css/mDefault.scss';
+
+.flexBox1 {
+  flex: 1;
+}
+
+.flexBox8 {
+  flex: 8;
+}
+
+.displayFlex {
+  display: flex !important;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.pageContainerM {
+  height: 100%;
+  width: 100%;
+  .alertContainerM {
+    display: block;
+    flex: none;
+    height: auto;
+    * {
+      display: block;
+      flex: none;
+      height: auto;
+    }
+    .alertBackOverlayM {
+      background-color: rgba(0, 0, 0, .7) !important;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .alertModalM {
+      position: absolute;
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+      z-index: 101;
+      height: 200px;
+      overflow: hidden;
+      top: calc(50% - 100px);
+      .warningHeaderM {
+        padding: 0;
+        text-align: center;
+        background: #ebad1a;
+        > img {
+          height: 70px;
+          width: 70px;
+          margin: 0 auto;
+        }
+      }
+      .warningContentM {
+        background: #fff;
+        color: #000;
+        text-align: center;
+        padding: 0;
+        height: 130px;
+        .warningTitleM {
+          p {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+            line-height: 50px;
+          }
+        }
+        .warningDescM {
+          color: #4e4e4e;
+          font-size: 13px;
+          font-weight: 600;
+          margin: 0;
+        }
+        .okButtonM {
+          background: #f9f6f0 !important;
+          border-radius: 19px !important;
+          border: 1px solid #00b186 !important;
+          color: #000 !important;
+          padding: 7px;
+          width: 100px;
+          margin: 12px auto;
+          display: block;
+        }
+      }
+    }
+  }
+  div {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+  #exploreM.exploreM {
+    background-color: $primary-purple;
+    flex-direction: row;
+    h1 {
+      flex: 2;
+      text-align: center;
+      color: $text-light;
+      //font-size: 30px !important;
+      //margin-top: 30px !important;
+      //// padding-top: 10px;
+    }
+
+    .verticalLine {
+      font-size: 30px !important;
+      margin-top: 30px !important;
+    }
+
+    .pillarsContainerM > h1,
+    .subPillarsContainerM > h1,
+    .countriesContainerM > h1 {
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+    }
+
+    .pillarNameM {
+      display: none;
+      font-size: 20px !important;
+      transform: rotate(-90deg);
+      width: 500px;
+      height: 22px;
+      top: 300px;
+      left: -212px;
+      position: absolute;
+      text-align: right;
+    }
+
+    .minimizedM {
+      max-width: 75px;
+
+      .pillarNameM {
+        display: block;
+      }
+
+      > h1 {
+        position: relative !important;
+        cursor: pointer;
+      }
+    }
+
+    .activeM {
+      > h1 {
+        max-width: 100px;
+      }
+    }
+
+    .pillarsContainerM {
+      @include gradient(45deg, $grid-first, $grid-second);
+      @include transition(all, ease, 0.5s);
+
+      // Screen size 0 - 450px
+      @media screen and (max-width: 450px) {
+        position: absolute;
+        width: 100%;
+        &.leftM {
+          right: 100vw;
+        }
+        &.rightM {
+          right: -100vw;
+        }
+        &.activeM {
+          z-index: 5;
+          right: 0;
+          display: block;
+          padding-top: 1px;
+          .stepContentM {
+            display: block !important;
+            height: calc(100% - 60px);
+            .middleM {
+              display: block;
+              margin-top: 60px;
+              height: 100px;
+              padding: 0;
+              h1 {
+                display: block;
+                width: 100%;
+                text-align: inherit;
+                padding: 0 20px;
+                margin-bottom: 20px;
+              }
+              p {
+                display: block;
+                width: 100%;
+                text-align: inherit;
+                padding: 0 20px;
+                //font-size: 15px;
+              }
+            }
+            .bottomM {
+              margin: 0;
+              margin-top: 100px;
+              height: calc(100% - 140px);
+              overflow-y: scroll;
+              -webkit-overflow-scrolling: touch;
+            }
+          }
+        }
+      }
+
+      // Screen size unspecified
+      .stepContentM {
+        @include transition(all, ease, 0.5s);
+        flex: 10;
+        display: flex;
+        flex-direction: column;
+        .topM {
+          //flex: 1;
+          max-height: 80px;
+          align-items: flex-start;
+          margin-top: 20px;
+          @media screen and (orientation: landscape) {
+            // margin-top: 10px;
+          }
+          @media screen and (max-width: 450px) {
+            display: none;
+          }
+          a {
+            padding: 18px 15px 15px 0;
+            //padding-left: 0;
+            @include transition(all, ease, 0.2s);
+            img {
+              width: 13px;
+              margin-bottom: 4px;
+              margin-right: 10px;
+              margin-left: 0;
+            }
+            span {
+              font-size: 16px;
+              margin-top: 5px;
+              color: hsla(0, 0%, 100%, .3) !important;
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+        .middleM {
+          // flex: 3;
+          min-height: 80px;
+          max-height: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          h1 {
+            flex: none;
+            margin: 15px 0;
+          }
+          p {
+            width: 100%;
+            color: #fff;
+            opacity: 0.3;
+            margin-top: 5px;
+            //font-size: 1.5vw;
+            padding-right: 15%;
+          }
+        }
+        .bottomM {
+          //flex: 6;
+          //overflow: hidden;
+          margin-top: 5%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          -webkit-overflow-scrolling: touch;
+          button {
+            height: auto;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            outline: none;
+            background: transparent;
+            display: flex;
+            //flex: 0 1 25%;
+
+            .imageHolderM {
+              margin: 0;
+              flex: 1;
+              height: auto;
+              div {
+                width: 30px;
+                height: 30px;
+                opacity: 0.5;
+                display: inline-table;
+                &.activeM {
+                  opacity: 1 !important;
+                }
+                &.Education {
+                  background: url('/assets/svg/education-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/education-green.svg') no-repeat;
+                  }
+                }
+                &.Energy {
+                  background: url('/assets/svg/energy-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/energy-green.svg') no-repeat;
+                  }
+                }
+                &.Economy {
+                  background: url('/assets/svg/economy-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/economy-green.svg') no-repeat
+                  }
+                }
+                &.Finance {
+                  background: url('/assets/svg/finance-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/finance-green.svg') no-repeat;
+                  }
+                }
+                &.Health {
+                  background: url('/assets/svg/health-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/health-green.svg') no-repeat
+                  }
+                }
+                &.Industry {
+                  background: url('/assets/svg/industry-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/industry-green.svg') no-repeat;
+                  }
+                }
+                &.Infrastructure {
+                  background: url('/assets/svg/infrastructure-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/infrastructure-green.svg') no-repeat;
+                  }
+                }
+                &.Labor {
+                  background: url('/assets/svg/labor-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/labor-green.svg') no-repeat;
+                  }
+                }
+                &.Security {
+                  background: url('/assets/svg/security-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/security-green.svg') no-repeat;
+                  }
+                }
+                &.Justice {
+                  background: url('/assets/svg/justice-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/justice-green.svg') no-repeat;
+                  }
+                }
+                &.Social {
+                  background: url('/assets/svg/social-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/social-green.svg') no-repeat;
+                  }
+                }
+                &.Technology {
+                  background: url('/assets/svg/technology-white.svg') no-repeat;
+                  &.activeM {
+                    background: url('/assets/svg/technology-green.svg') no-repeat;
+                  }
+                }
+                &.SDG1 {
+                  background: url('/assets/icons/sdgs/[SDG 1] End Poverty-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 1] End Poverty-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG2 {
+                  background: url('/assets/icons/sdgs/[SDG 2] End Hunger-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 2] End Hunger-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG3 {
+                  background: url('/assets/icons/sdgs/[SDG 3] Good Health and Well-being-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 3] Good Health and Well-being-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG4 {
+                  background: url('/assets/icons/sdgs/[SDG 4] Quality Education-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 4] Quality Education-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG5 {
+                  background: url('/assets/icons/sdgs/[SDG 5] Gender Equality-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 5] Gender Equality-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG6 {
+                  background: url('/assets/icons/sdgs/[SDG 6] Clean Water and Sanitation-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 6] Clean Water and Sanitation-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG7 {
+                  background: url('/assets/icons/sdgs/[SDG 7] Affordable and Clean Energy-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 7] Affordable and Clean Energy-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG8 {
+                  background: url('/assets/icons/sdgs/[SDG 8] Decent Work and Economic Growth-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 8] Decent Work and Economic Growth-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG9 {
+                  background: url('/assets/icons/sdgs/[SDG 9] Industry, Innovation and Infrastructure-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 9] Industry, Innovation and Infrastructure-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG10 {
+                  background: url('/assets/icons/sdgs/[SDG 10] Reduced Inequality-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 10] Reduced Inequality-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG11 {
+                  background: url('/assets/icons/sdgs/[SDG 11] Sustainable Cities and Communities-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 11] Sustainable Cities and Communities-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG12 {
+                  background: url('/assets/icons/sdgs/[SDG 12] Responsible Consumption and Production-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 12] Responsible Consumption and Production-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG13 {
+                  background: url('/assets/icons/sdgs/[SDG 13] Climate Action-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 13] Climate Action-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG14 {
+                  background: url('/assets/icons/sdgs/[SDG 14] Life Below Water-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 14] Life Below Water-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG15 {
+                  background: url('/assets/icons/sdgs/[SDG 15] Life on Land-white.png') no-repeat;
+                  background-size: contain;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/[SDG 15] Life on Land-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG16 {
+                  background: url('/assets/icons/sdgs/[SDG 16] Peace and Justice Strong Institutions-white.png') no-repeat;
+                  background-size: contain;
+                  &:hover {
+                    background: url('/assets/icons/sdgs/[SDG 16] Peace and Justice Strong Institutions-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/sixteen-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.SDG17 {
+                  background: url('/assets/icons/sdgs/[SDG 17] Partnerships to achieve the Goal-white.png') no-repeat;
+                  background-size: contain;
+                  &:hover {
+                    background: url('/assets/icons/sdgs/[SDG 17] Partnerships to achieve the Goal-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/seventeen-green.png') no-repeat;
+                    background-size: contain;
+                  }
+                }
+                &.missing {
+                  background: url('/assets/icons/sdgs/missing-icon-white.svg') no-repeat;
+                  background-position: center;
+                  background-size: contain;
+                  opacity: 0.5 !important;
+                  &.activeM {
+                    background: url('/assets/icons/sdgs/missing-icon-green.svg') no-repeat center;
+                    opacity: 1 !important;
+                  }
+                }
+              }
+            }
+            .textHolderM {
+              flex: 5;
+              display: flex;
+              p {
+                //width: 150px;
+                //text-align: left;
+                //text-overflow: ellipsis;
+                //white-space: nowrap;
+                overflow: hidden;
+                color: $text-light;
+                margin: 0;
+                font-size: 16px;
+                //font-size: 2.5vw;
+                &.activeM {
+                  color: $text-lightGreen;
+                }
+              }
+              @media screen and (orientation: landscape) {
+                flex: 7;
+                line-height: 35px;
+                margin-left: 15px;
+              }
+            }
+            &:active {
+              .textHolderM {
+                p {
+                  color: $text-lightGreen;
+                }
+              }
+            }
+          }
+
+          @media (min-width: 720px) and (max-width: 1024px) {
+          }
+
+          @media (min-width: 450px) and (max-width: 720px) {
+          }
+
+          @media screen and (max-width: 450px) {
+            padding-left: 10vw;
+            flex: 10;
+            display: block;
+            margin-top: 20px;
+            button {
+              font-size: 4vw;
+              padding-right: 0;
+              display: block;
+              width: 100%;
+              height: 15vw;
+              float: left;
+              flex: 0 1 100%;
+              .imageHolderM {
+                width: 30px;
+                float: left;
+              }
+              .textHolderM {
+                flex: 8;
+                display: flex;
+                p {
+                  line-height: 7.5vw;
+                  //font-size: 5vw;
+                  margin-left: 15px;
+                }
+                @media screen and (orientation: landscape) {
+                  // flex: 7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .spaceHolderM {
+      // flex: 4;
+      @media screen and (orientation: landscape) {
+        flex: 1;
+      }
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+    }
+
+    .subPillarsContainerM {
+      @include gradient(45deg, $grid-third, $grid-forth);
+      @include transition(all, ease, 0.5s);
+
+      // Screen size 0 - 450px
+      @media screen and (max-width: 450px) {
+        position: absolute;
+        width: 100%;
+        &.leftM {
+          right: 100vw;
+        }
+        &.rightM {
+          right: -100vw;
+        }
+        &.activeM {
+          z-index: 5;
+          right: 0;
+          display: block;
+          padding-top: 1px;
+          overflow: hidden;
+          .stepContentM {
+            display: block !important;
+            height: calc(100% - 60px);
+            .middleM {
+              display: block;
+              margin-top: 60px;
+              height: 50px;
+              padding: 0;
+              h1 {
+                display: block;
+                width: 100%;
+                text-align: inherit;
+                padding: 0 20px;
+                margin-bottom: 20px;
+              }
+              p {
+                display: block;
+                width: 100%;
+                text-align: inherit;
+                padding: 0 20px;
+                //font-size: 13px;
+              }
+            }
+            .bottomM {
+              margin: 0;
+              padding-top: 10px;
+              height: calc(100% - 50px);
+              overflow-y: scroll;
+              -webkit-overflow-scrolling: touch;
+            }
+          }
+        }
+      }
+      .stepContentM {
+        @include transition(all, ease, 0.5s);
+        flex: 10;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start; /* align items in Main Axis */
+        align-items: stretch; /* align items in Cross Axis */
+        align-content: stretch; /* Extra space in Cross Axis */
+
+        .topM {
+          //flex: 1;
+          align-items: flex-start;
+          margin-top: 20px;
+          min-height: 80px;
+          max-height: 80px;
+
+          @media screen and (orientation: landscape) {
+            //margin-top: 10px;
+          }
+          @media screen and (max-width: 450px) {
+            display: none;
+          }
+          .dashLineM {
+            color: $text-light;
+            font-size: 16px;
+            font-weight: normal;
+            margin: 18px 15px 0 0;
+            @media screen and (orientation: landscape) {
+              //line-height: 50px;
+            }
+          }
+          a, button {
+            padding: 18px 15px 15px 0;
+            background: transparent;
+            border: none;
+            @include transition(all, ease, 0.2s);
+            img {
+              width: 13px;
+              margin-bottom: 4px;
+              margin-right: 10px;
+              margin-left: 0;
+            }
+            span {
+              font-size: 16px;
+              margin-top: 5px;
+              color: hsla(0, 0%, 100%, .3) !important;
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+              outline: none;
+            }
+          }
+          a {
+            padding-left: 0;
+          }
+        }
+        .middleM {
+          //flex: 1;
+          //display: flex;
+          //flex-direction: column;
+          //align-items: flex-start;
+
+          min-height: 80px;
+          max-height: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          h1 {
+            flex: none;
+            margin: 15px 0px;
+          }
+          @media screen and (max-width: 450px) {
+            justify-content: flex-end;
+            padding-left: 20px;
+            flex: 2;
+            p {
+              //font-size: 4vw;
+              padding-right: 0;
+            }
+          }
+        }
+        // Bottom div
+        .bottomM {
+
+          //margin-top: 10%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          -webkit-overflow-scrolling: touch;
+
+          //column-count: 3;
+          //column-gap: 3em;
+          //
+          //
+          ////margin-top: 10%;
+          ////display: flex;
+          ////flex: initial;
+          ////
+          ////display: flex;
+          ////flex-direction: column;
+          ////flex-wrap: wrap;
+          ////height: 100vw;
+          //
+          ////overflow-y: scroll;
+          ////overflow-x: hidden;
+          ////flex-direction: row;
+          ////flex-wrap: wrap;
+          //
+          ////-webkit-overflow-scrolling: touch;
+          //margin-top: 3%;
+          ////display: flex;
+          ////flex-direction: column;
+          ////flex-wrap: wrap;
+          //-webkit-overflow-scrolling: touch;
+          //
+          overflow-y: scroll;
+          min-height: 66%;
+
+          //display: flex;
+          //flex-direction: row;
+          //justify-content: center;
+          //align-content: stretch;
+          //width: 100%;
+          //margin: auto;
+
+          .section33 {
+            width: 33.33333%;
+            float: left;
+          }
+
+          .section50 {
+            width: 50%;
+            float: left;
+          }
+
+          .section100 {
+            width: 100%;
+          }
+
+          // Pillar
+          .subPillarM {
+            display: block;
+            margin-bottom: 10px;
+            //width: 33.3%;
+            //float: left;
+            //
+            //display: inline-block;
+            //margin: 0 0 1em;
+            //width: 100%;
+
+            //display: flex;
+            //flex-direction: column;
+            //justify-content: flex-start;
+            //align-content: stretch;
+            //flex-grow: 1;
+
+            //margin-bottom: 20px;
+            //width: 50%;
+
+            //flex-direction: row;
+            //justify-content: center;
+            //align-items: center;
+            //display: flex;
+
+            //border: none;
+            //outline: none;
+            //background: transparent;
+
+            > p {
+              //color: $text-gray;
+              color: #fff;
+              opacity: .5;
+              font-size: 14px;
+
+            }
+
+            // Pillar List
+            .subPillarListM {
+              display: block;
+              //flex: initial;
+              //flex-direction: column;
+              //display: flex;
+
+              //justify-content: flex-start;
+              //align-items: stretch;
+              //align-content: stretch;
+
+              button {
+                //min-height: 40px;
+                //max-height: 40px;
+                padding-left: 0;
+                background: transparent;
+                border: none;
+
+                //display: flex;
+                //flex: 1;
+
+                @include transition(all, ease, 0.2s);
+                p {
+                  color: #fff;
+                  text-align: initial;
+                  margin: 0;
+                  line-height: 16px;
+                  font-size: 14px;
+                  &.activeM {
+                    color: $text-lightGreen;
+                  }
+                }
+                img {
+                  margin-top: -8px;
+                  width: 30px;
+                  //flex: 2;
+                }
+                &:active {
+                  p {
+                    color: $text-lightGreen;
+                  }
+                }
+                &:hover, &:focus {
+                  text-decoration: none;
+                  outline: none;
+                }
+              }
+            }
+          }
+
+          @media screen and (max-width: 450px) {
+            display: block;
+            padding-left: 10vw;
+            .subPillarM {
+              margin-bottom: 20px;
+              p {
+                font-size: 5vw;
+                padding-right: 0;
+              }
+              .subPillarListM {
+                button {
+                  padding-left: 0;
+                  p {
+                    font-size: 4vw;
+                  }
+                  img {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .countriesContainerM {
+      @include gradient(45deg, $grid-fifth, $grid-sixth);
+      @include transition(all, ease, 0.5s);
+      @media screen and (max-width: 450px) {
+        position: absolute;
+        width: 100%;
+        &.leftM {
+          right: 100vw;
+        }
+        &.rightM {
+          right: -100vw;
+        }
+        &.activeM {
+          z-index: 5;
+          display: block;
+          right: 0;
+          padding-top: 1px;
+          overflow: hidden;
+          .stepContentM {
+            display: block !important;
+            height: calc(100% - 60px);
+            .middleM {
+              display: block;
+              margin-top: 60px;
+              height: 100px;
+              padding: 0;
+              h1 {
+                display: block;
+                width: 100%;
+                text-align: inherit;
+                padding: 0 20px;
+                margin-bottom: 20px;
+              }
+              p {
+                display: block;
+                width: 100%;
+                text-align: inherit;
+                padding: 0 20px;
+                //font-size: 13px;
+              }
+            }
+            .bottomM {
+              margin: 0;
+              padding-top: 10px;
+              height: calc(100% - 180px);
+              overflow-y: scroll;
+              -webkit-overflow-scrolling: touch;
+            }
+            a:last-child {
+              @include gradient(180deg, transparent, $grid-second);
+              height: 96px;
+              overflow: hidden;
+              color: $text-gray;
+              width: 100%;
+              display: flex !important;
+              justify-content: center;
+              align-items: flex-end;
+              p {
+                font-size: 20px;
+                text-align: center;
+                line-height: 28px;
+                //line-height: 13vh;
+              }
+            }
+          }
+        }
+      }
+
+      .stepContentM {
+        @include transition(all, ease, 0.5s);
+        flex: 10;
+        display: flex;
+        flex-direction: column;
+        .topM {
+          //flex: 1;
+          align-items: flex-start;
+          margin-top: 20px;
+          min-height: 80px;
+
+          @media screen and (orientation: landscape) {
+            //margin-top: 10px;
+          }
+          @media screen and (max-width: 450px) {
+            display: none;
+          }
+          .dashLineM {
+            color: $text-light;
+            font-size: 16px;
+            margin: 18px 15px 0 0;
+            @media screen and (orientation: landscape) {
+              //line-height: 50px;
+            }
+          }
+          a, button {
+            padding: 18px 15px 15px 0;
+            background: transparent;
+            border: none;
+            @include transition(all, ease, 0.2s);
+            img {
+              width: 13px;
+              margin-bottom: 4px;
+              margin-right: 10px;
+              margin-left: 0;
+            }
+            span {
+              font-size: 16px;
+              margin-top: 5px;
+              color: hsla(0, 0%, 100%, .3) !important;
+              white-space: nowrap;
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+              outline: none;
+            }
+          }
+          a {
+            padding-left: 0;
+          }
+        }
+        .middleM {
+
+          min-height: 140px;
+          max-height: 140px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          h1 {
+            flex: 0;
+            margin: 0px;
+            text-align: left;
+            @include transition(all, ease, 0.2s);
+            span {
+              display: none;
+            }
+          }
+          .countrySearchMobileM {
+            display: none;
+          }
+          //input {
+          //  flex: 7;
+          //  margin: 0px;
+          //  text-align: left;
+          //  background: transparent;
+          //  color: $text-light;
+          //  font-size: 25px;
+          //  border: none;
+          //  border-bottom: 1px solid $button-lightGreen;
+          //  @include transition(all, ease, 0.2s);
+          //  &:hover, &:focus {
+          //    text-decoration: none;
+          //    outline: none;
+          //  }
+          //}
+          button {
+            flex: 2;
+            background-color: transparent;
+            background: transparent;
+            border: none;
+            height: 100%;
+            @include transition(all, ease, 0.2s);
+            img {
+              height: 42px;
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+              outline: none;
+            }
+          }
+          @media screen and (max-width: 450px) {
+            display: block;
+            margin-top: 60px;
+            h1 {
+              font-size: 8vw;
+              padding-left: 20px;
+              width: 100%;
+              margin-bottom: 20px;
+              span {
+                display: block;
+              }
+            }
+            input {
+              display: flex !important;
+              background-color: rgba(0, 0, 0, 0.7);
+              width: 85%;
+              padding: 0 10px;
+              border: none;
+              line-height: 50px;
+              height: 50px;
+            }
+            .countrySearchMobileM {
+              display: block;
+              width: 15%;
+              float: left;
+              background-color: rgba(0, 0, 0, 0.7);
+              height: 50px;
+              padding-left: 10px;
+              img {
+                height: 50px;
+                width: 40px;
+                opacity: 0.5;
+              }
+            }
+            button {
+              display: none;
+            }
+          }
+        }
+        .bottomM {
+          flex: 10;
+          display: block;
+          flex-direction: row;
+          flex-wrap: wrap;
+          overflow-y: auto;
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
+          margin-bottom: 60px;
+          .countryGroupWrapperM {
+            height: auto;
+            flex: none !important;
+            display: block !important;
+            column-gap: 1em;
+            &.mCol2{
+              @include column-count(2);
+            }
+            &.mCol3{
+              @include column-count(3);
+            }
+            &.mCol4{
+              @include column-count(4);
+            }
+            .countryGroupM {
+              border: none;
+              outline: none;
+              background: transparent;
+              width: 100%;
+              margin-bottom: 15px;
+              display: inline-block;
+              p {
+                color: $text-gray;
+                //font-size: 2.5vw;
+              }
+              .countryGroupListM {
+                flex-direction: column;
+                align-items: flex-start;
+                display: block;
+                button {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  background: transparent;
+                  border: none;
+                  padding: 0;
+                  margin-bottom: 15px;
+                  @include transition(all, ease, 0.2s);
+                  p {
+                    //font-size: 2vw;
+                    color: $text-light;
+                    text-align: initial;
+                    margin: 0;
+                    flex: 5;
+                    &.activeM {
+                      color: $text-lightGreen;
+                    }
+                  }
+                  img {
+                    width: 30px;
+                    flex: 1;
+                  }
+                  &:active {
+                    // background-color: rgba(0,0,0,0.5);
+                    p {
+                      color: $text-lightGreen;
+                    }
+                  }
+                  &:hover, &:focus {
+                    text-decoration: none;
+                    outline: none;
+                  }
+                }
+              }
+            }
+          }
+          @media screen and (max-width: 450px) {
+            padding-left: 20px;
+            .countryGroupWrapperM .countryGroupM {
+              p {
+                font-size: 5vw;
+              }
+              .countryGroupListM button p {
+                font-size: 4vw;
+              }
+            }
+          }
+        }
+        a:last-child {
+          @include gradient(180deg, transparent, $grid-second);
+          height: 50px;
+          overflow: hidden;
+          //color: $text-gray;
+          opacity: .4;
+          color: #fff!important;
+
+          //width: 100%;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          bottom: 0;
+          width: 80%;
+          left: 20%;
+          text-decoration: none;
+
+          :hover{
+            text-decoration: underline;
+          }
+
+          @media screen and (max-width: 450px) {
+            left: 0;
+          }
+          p {
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            line-height: 13vh;
+          }
+        }
+      }
+    }
+    .navigatorM {
+      display: none;
+      position: absolute;
+      z-index: 50;
+      width: 100%;
+      height: 7vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+      @include gradient(180deg, $grid-second, transparent);
+      .navigatorBlockerM {
+        a {
+          height: 8px;
+          margin-right: 3vw;
+          margin-left: 0
+        }
+
+        @media screen and (max-width: 450px) {
+          a {
+            height: 8px;
+            margin-right: 3vw;
+            margin-left: 10px;
+          }
+        }
+
+        .exit-img-icon-desktop {
+          top: 15px;
+          opacity: 0.75;
+        }
+
+
+        display: block;
+        margin: 0 auto;
+        width: 20%;
+        padding-top: 15px;
+        img {
+          height: 8px;
+          margin-right: 3vw;
+          margin-left: 0;
+          opacity: 0.3;
+          &:first-child {
+            height: 10px;
+          }
+          &.activeM {
+            opacity: 1;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      @media screen and (max-width: 450px) {
+        display: block;
+      }
+    }
+    @media screen and (orientation: landscape) {
+      @media screen and (max-width: 7364px) {
+        .middleM {
+          h1 {
+            margin: 10px 0 !important;
+          }
+        }
+        .subPillarsContainerM .stepContentM .middleM {
+          overflow: hidden;
+          //flex: 2.5;
+        }
+        .countriesContainerM .stepContentM .middleM {
+          overflow: hidden;
+          //flex: 3;
+        }
+      }
+    }
+  }
+}
+
+.pageContainerM[dir='rtl'] {
+  #exploreM.exploreM {
+    .pillarsContainerM {
+      .stepContentM {
+        .topM {
+          a {
+            padding: 18px 15px;
+            padding-right: 0;
+            img {
+              margin-left: 10px;
+              margin-right: 0;
+            }
+          }
+        }
+        .middleM {
+          p {
+            padding-left: 15%;
+            padding-right: 0;
+          }
+          @media screen and (max-width: 450px) {
+            justify-content: flex-end;
+            padding-right: 20px;
+            p {
+              //font-size: 4vw;
+              padding-left: 20px;
+            }
+          }
+        }
+        .bottomM {
+          button {
+            .imageHolderM {
+              margin-left: 10px;
+            }
+            .textHolderM {
+              @media screen and (orientation: landscape) {
+                flex: 7;
+              }
+            }
+          }
+          @media screen and (max-width: 450px) {
+            padding-right: 10vw;
+            padding-left: 0;
+            button {
+              .imageHolderM {
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .subPillarsContainerM {
+      .stepContentM {
+        .topM {
+          a {
+            padding: 18px 15px;
+            padding-right: 0;
+            img {
+              margin-left: 10px;
+              margin-right: 0;
+            }
+          }
+        }
+        .middleM {
+          @media screen and (max-width: 450px) {
+            justify-content: flex-end;
+            padding-right: 20px;
+            p {
+              //font-size: 4vw;
+              padding-left: 0;
+            }
+          }
+        }
+        .bottomM {
+          @media screen and (max-width: 450px) {
+            padding-left: 0;
+            padding-right: 10vw;
+            button {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .countriesContainerM {
+      .stepContentM {
+        .topM {
+          a {
+            padding: 18px 15px;
+            padding-right: 0;
+            img {
+              margin-left: 10px;
+              margin-right: 0;
+            }
+          }
+        }
+        .middleM {
+          h1 {
+            text-align: right;
+          }
+          input {
+            text-align: right;
+          }
+          @media screen and (max-width: 450px) {
+            h1 {
+              padding-left: 0;
+              padding-right: 20px;
+            }
+            .countrySearchMobileM {
+              float: right;
+              padding-right: 10px;
+              padding-left: 0;
+            }
+          }
+        }
+        .bottomM {
+          .countryGroupWrapperM .countryGroupM {
+            padding-left: 0;
+            padding-right: 20px;
+          }
+        }
+      }
+      a:last-child {
+        left: 0;
+        right: auto;
+      }
+    }
+    .navigatorM {
+      img {
+        margin-left: 3vw;
+        margin-right: 0;
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.desktopStepContentM {
+  //padding-left: 50px;
+  a:last-child {
+    cursor: pointer;
+    background: none !important;
+    text-transform: uppercase;
+    p {
+      text-decoration: underline;
+      font-size: 12px !important;
+    }
+  }
+}
+
+.dashLineM {
+  color: hsla(0, 0%, 100%, .3) !important;
+}
+
+.stepContentM .topM a img {
+  opacity: 0.7;
+}
+
+html[dir="ltr"] {
+  .pageContainerM #exploreM.exploreM .subPillarsContainerM .stepContentM .bottomM .subPillarM {
+    padding-right: 2%;
+  }
+
+  .pageContainerM #exploreM.exploreM .pillarsContainerM .stepContentM .bottomM button .textHolderM p {
+    text-align: left;
+  }
+}
+
+html[dir="rtl"] {
+  .pageContainerM #exploreM.exploreM .subPillarsContainerM .stepContentM .bottomM .subPillarM {
+    padding-left: 2%;
+  }
+
+  .pageContainerM #exploreM.exploreM .pillarsContainerM .stepContentM .bottomM button .textHolderM p {
+    text-align: right;
+  }
+}

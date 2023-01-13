@@ -1,0 +1,26 @@
+@mixin iconGenerator($iconURL, $width, $height) {
+  min-width: $width;
+  height: $height;
+  display: inline-block;
+  vertical-align: middle;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url($iconURL);
+  background-repeat: no-repeat;
+  //background-position: center;
+}
+
+.exportButton {
+  cursor: pointer;
+  background-position: 0px -4px;
+  @include iconGenerator("/assets/svg/excel-white.svg", 30px, 30px);
+  &:hover {
+   cursor: pointer;
+   @include iconGenerator("/assets/svg/excel-green.svg", 30px, 30px);
+  }
+
+  img {
+    height: 23px !important;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  extends: "rallycoding",
+  rules: {
+    max-len: "off",
+    no-useless-escape: "off",
+    jsx-a11y/href-no-hash: "off",
+    no-nested-ternary: "off"
+    },
+  globals: {
+    navigator: true,
+    window: true,
+    document: true,
+    fetch: true,
+    localStorage: true,
+    self: true,
+    XMLHttpRequest: true
+  }
+}

@@ -1,0 +1,40 @@
+@import 'mVariables.scss';
+
+body {
+  font-family: Etelka-Light;
+  #root {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  #root>div {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+}
+
+.pageContainerM {
+  height: 100%;
+  width: 100%;
+}
+
+
+div {
+  outline: none;
+}
+
+.loaderM{
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+  justify-content: center;
+  align-items: center;
+  svg path, svg rect{
+    fill: $button-lightGreen;
+  }
+}

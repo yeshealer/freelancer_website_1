@@ -1,0 +1,440 @@
+.fullScreenModal {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 99;
+  background: #222222;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 5vh 0 5vh 0;
+
+  color: #fff;
+
+  &.mobileModeModal {
+    .graphContent {
+
+    }
+
+    .overlayForEmptyState {
+      display: none !important;
+    }
+  }
+
+  &.desktopModeModal {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .benchmarkButtonM {
+      display: none;
+    }
+
+    .graphBottomText {
+      text-align: center;
+      padding-left: 58px;
+    }
+
+    .graphContentWrapper {
+      margin-top: 20px;
+    }
+
+    .recharts-cartesian-axis-tick-line,
+    .recharts-cartesian-axis-line {
+      stroke: #ffffff !important;
+    }
+
+    .recharts-cartesian-axis-tick-value tspan {
+      fill: #fff !important;
+    }
+
+    .overlayForEmptyState {
+      position: absolute;
+      text-align: center;
+
+      //top: 160px;
+      //width: 70%;
+      top: 40%;
+      //position: absolute;
+
+      z-index: 99;
+      display: none;
+
+      .emptyTextM {
+        width: 420px;
+        margin: auto auto;
+      }
+    }
+
+    .selectedKPIColCell {
+      background: none !important;
+
+      .kpiNameTableCellM {
+        color: #00b186 !important;
+      }
+    }
+
+    .kpiNameTableCellM {
+      font-size: 12px !important;
+      opacity: 1 !important;
+      cursor: pointer;
+
+      &:hover {
+        color: #00b186 !important;
+      }
+    }
+
+    .plus-img-icon {
+      margin-left: 0 !important;
+      margin-right: 4px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .titleM {
+      font-size: 24px !important;
+    }
+
+    .subTitleM {
+      font-size: 16px !important;
+    }
+
+    .contentDetailH1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contentDetailP {
+      margin-bottom: 22px;
+      color: #696666;
+
+      a {
+        color: #696666;
+      }
+    }
+
+    .selectedCountriesM {
+      margin-bottom: 22px;
+    }
+
+    .searchBoxM {
+      margin: 0 0 22px 0;
+    }
+
+    .scrollContent {
+      height: 250px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .yAxisName {
+      height: 150px;
+      width: 5%;
+      div {
+        transform: rotate(-90deg);
+      }
+    }
+
+    .graphContent {
+      width: 70%;
+    }
+
+    .graphStatContent {
+      .scrollContentGraph {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 25vh;
+      }
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .print-black-tootip {
+    //position: absolute;
+    //right: 60px;
+    //top: 32px;
+  }
+
+  .pdf-black-tootip {
+    //position: absolute;
+    //right: 100px;
+    //top: 32px;
+  }
+
+  .export-black-tootip {
+    //position: absolute;
+    //right: 140px;
+    //top: 32px;
+  }
+
+  // .exportButton {
+  //   position: absolute;
+  //   right: 40px;
+  //   top: 2px;
+  // }
+
+  // .pdfButton {
+  //   position: absolute;
+  //   right: 70px;
+  //   top: 2px;
+  // }
+
+  .benchmarkButtonM {
+    position: fixed;
+    right: 8px;
+    bottom: 56px;
+    z-index: 100;
+
+    > img {
+      width: 90px;
+    }
+  }
+
+  .modalHeaderM {
+    margin: 0 20px 5px 20px;
+    width:90%;
+    .titleM {
+      display: inline-block;
+      font-size: 24px;
+    }
+
+    .back-img-icon {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .subTitleM {
+      margin-top: 6px;
+      color: #a9a9a9;
+      font-size: 14px;
+
+      max-width: 85vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+    }
+  }
+
+  .innerSidePadding {
+    padding: 0 20px;
+  }
+
+  .overFlowYScroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    position: relative;
+  }
+
+  .border1PXM {
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+    opacity: 0.2;
+  }
+
+  .line1PX {
+    width: 100%;
+    opacity: 0.2;
+    background: #fff;
+    height: 1px;
+  }
+
+  .gapM10 {
+    margin: 5px 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .gapM20 {
+    margin: 10px 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .gapM30 {
+    margin: 15px 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .gapM {
+    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .titleM {
+    font-size: 15px;
+  }
+
+  .selectedCountriesM {
+    .clearAll {
+      display: inline-block;
+      color: #6a6a6a;
+      text-decoration: underline;
+      padding: 6px 12px;
+      margin-bottom: 8px;
+
+    }
+
+    > div.countryBubble {
+      display: inline-block;
+      background: #2d2d2d;
+      cursor: pointer;
+      border-radius: 24px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+
+      padding: 6px 12px 4px 12px;
+
+      &.group {
+        border: 1px solid #4f4d4e;
+        color: #fff;
+        background: transparent !important;
+
+      }
+      &.active {
+        background: #4f4d4e !important;
+        //color: #f4f4f4;
+      }
+
+      > span {
+        //margin-left: 8px;
+        font-family: Etelka-Text-Pro, serif;
+      }
+    }
+
+    > div.groupBubble {
+      display: inline-block;
+      padding: 4px 12px;
+      cursor: pointer;
+      border-radius: 24px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      border: 1px solid #6b6b6b;
+      color: #6b6b6b;
+      > span {
+        color: #f4f4f4;
+        //margin-right: 8px;
+        font-size: 16px;
+        font-family: Etelka-Text-Pro-M, serif;
+      }
+
+    }
+  }
+
+  .countryListAlpha {
+
+    .letterTitleM {
+      color: #424242;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    .countryNameM {
+      margin-bottom: 6px;
+      color: #e1e1e1;
+
+      .check-img-icon {
+        background-image: none;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &.active {
+        color: #00b186;
+
+        .check-img-icon {
+          background-image: url("/assets/svg/checkmark-green.svg");
+        }
+
+      }
+
+    }
+  }
+}
+
+.Stats-Table table thead tr th,
+.Stats-Table table tbody tr td {
+  font-size: 14px;
+  padding: 10px;
+  /*  padding-left: 20px;*/
+  font-weight: normal;
+  border: none !important;
+  /*opacity: 0.8;*/
+}
+
+.Stats-Table table thead tr th:lang(ar),
+.Stats-Table table tbody tr td:lang(ar) {
+  font-size: 14px;
+  padding: 10px;
+  /*padding-right: 20px;*/
+  font-weight: normal;
+  border: none !important;
+  /*opacity: 0.8;*/
+}
+
+.Stats-Table table > tbody > tr:nth-of-type(odd) {
+  //background-color: #2b2b2b !important;
+
+}
+
+html[dir='rtl'] {
+  .full-panel-toolbar {
+    position: absolute;
+    left: 46px;
+    top: 32px;
+  }
+
+  .overlayForEmptyState {
+    right: 30%;
+  }
+
+  .fullStatsBenchmarkButton {
+    left: 8px !important;
+    right: inherit !important;
+  }
+
+  .fullScreenModal .modalHeaderM .back-img-icon {
+    //margin-right: 8px;
+    float: left;
+  }
+
+  .desktopModeModal {
+    .Select-multi-value-wrapper {
+      padding-right: 6px;
+    }
+    .graphStatContent {
+      margin-right: 3%;
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .full-panel-toolbar {
+    position: absolute;
+    right: 46px;
+    top: 32px;
+  }
+
+  .overlayForEmptyState {
+    left: 30%;
+  }
+
+  .fullScreenModal .modalHeaderM .back-img-icon {
+    margin-right: 8px;
+    margin-top: 3px;
+    float: left;
+  }
+
+  .desktopModeModal {
+    .graphStatContent {
+      margin-left: 3%;
+    }
+  }
+}
+

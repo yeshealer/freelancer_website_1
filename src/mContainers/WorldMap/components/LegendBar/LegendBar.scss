@@ -1,0 +1,24 @@
+.kpiLegend {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  .legendTextBox {
+    padding: 8px 10px;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 300px;
+
+    .kpiLegendText {
+      color: #19a981;
+      opacity: 1;
+    }
+  }
+
+  .legendBarDesktop {
+    position: static !important;
+    .highBar {
+      float: right !important;
+    }
+  }
+}

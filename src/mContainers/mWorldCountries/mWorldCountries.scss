@@ -1,0 +1,273 @@
+@import '../../mCommons/css/mDefault.scss';
+
+.worldCountriesContainerM > h1 {
+  @media screen and (max-width: 450px) {
+    display: none;
+  }
+}
+
+html[dir="rtl"] {
+  .worldCountriesContainerM {
+   .topM {
+     a {
+       padding: 18px 0 15px 0 !important;
+
+       img {
+         margin-right: 0 !important;
+         margin-left: 10px !important;
+       }
+     }
+   }
+  }
+}
+
+.worldCountriesContainerM {
+  background: linear-gradient(45deg, #3f0a27, #150e19);
+  padding: 0 140px;
+  @media screen and (max-width: 1024px) {
+    padding: 0 140px;
+  }
+  @media screen and (max-width: 720px) {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 360px) {
+    padding: 0 20px;
+  }
+  height: 100%;
+  width: 100%;
+  .topM {
+    //flex: 1;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    .dashLineM {
+      color: $text-light;
+      font-size: 16px;
+      margin: 18px 15px 0 0;
+      @media screen and (orientation: landscape) {
+        //line-height: 50px;
+      }
+    }
+    a {
+      padding: 18px 15px 15px 0;
+      background: transparent;
+      border: none;
+      @include transition(all, ease, 0.2s);
+      img {
+        width: 13px;
+        margin-bottom: 4px;
+        margin-right: 10px;
+        margin-left: 0;
+      }
+      span {
+        font-size: 16px;
+        margin-top: 5px;
+        color: hsla(0, 0%, 100%, .3) !important;
+        white-space: nowrap;
+      }
+      &:active {
+        //background-color: rgba(0, 0, 0, 0.5);
+      }
+      &:hover, &:focus {
+        text-decoration: none;
+        outline: none;
+      }
+    }
+    a {
+      padding-left: 0;
+    }
+  }
+  .middleM {
+    display: block;
+    height: 100px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    @media screen and (max-width: 920px) {
+      height: 150px;
+    }
+    @media screen and (max-width: 720px) {
+      height: auto;
+    }
+    h1 {
+      flex: 0;
+      text-align: center;
+      color: $text-light;
+      display: block;
+      width: 100%;
+      text-align: inherit;
+    }
+    p {
+      display: block;
+      width: 100%;
+      text-align: inherit;
+    }
+
+    .searchCountryContentM {
+      margin-bottom: 20px;
+      @media screen and (max-width: 920px) {
+        position: initial;
+      }
+    }
+    .countrySearchMobileM {
+      display: none;
+    }
+    button {
+      flex: 2;
+      background-color: transparent;
+      background: transparent;
+      border: none;
+      height: 100%;
+      @include transition(all, ease, 0.2s);
+      img {
+        height: 42px;
+      }
+      &:active {
+        //background-color: rgba(0, 0, 0, 0.5);
+      }
+      &:hover, &:focus {
+        text-decoration: none;
+        outline: none;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      display: block;
+      margin-top: 20px;
+      h1 {
+        font-size: 8vw;
+        padding-left: 0px;
+        width: 100%;
+        margin-bottom: 20px;
+        span {
+          display: block;
+        }
+      }
+      input {
+        display: flex !important;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 85%;
+        padding: 0 10px;
+        border: none;
+        line-height: 50px;
+        height: 50px;
+      }
+      .countrySearchMobileM {
+        display: block;
+        width: 15%;
+        float: left;
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 50px;
+        padding-left: 10px;
+        img {
+          height: 50px;
+          width: 40px;
+          opacity: 0.5;
+        }
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+  .bottomM {
+    flex: 10;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 10px;
+    height: calc(100% - 260px);
+    .countryGroupWrapperM {
+      height: auto;
+      flex: none !important;
+      display: block !important;
+      column-gap: 1em;
+      &.mCol2 {
+        @include column-count(2);
+      }
+      &.mCol3 {
+        @include column-count(3);
+      }
+      &.mCol4 {
+        @include column-count(4);
+        @media screen and (max-width: 1024px) {
+          @include column-count(3);
+        }
+        @media screen and (max-width: 720px) {
+          @include column-count(2);
+        }
+        @media screen and (max-width: 450px) {
+          @include column-count(1);
+        }
+      }
+      .countryGroupM {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        margin-bottom: 15px;
+        display: inline-block;
+        p {
+          color: $text-gray;
+          //font-size: 2.5vw;
+        }
+        .countryGroupListM {
+          flex-direction: column;
+          align-items: flex-start;
+          display: block;
+          a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 15px;
+            color: $text-light;
+            &:hover {
+              color: $text-lightGreen;
+            }
+            @include transition(all, ease, 0.2s);
+            p {
+              //font-size: 2vw;
+              color: $text-light;
+              text-align: initial;
+              margin: 0;
+              flex: 5;
+              &.activeM {
+                color: $text-lightGreen;
+              }
+            }
+            img {
+              width: 30px;
+              flex: 1;
+            }
+            &:active {
+              // background-color: rgba(0,0,0,0.5);
+              p {
+                color: $text-lightGreen;
+              }
+            }
+            &:hover, &:focus {
+              text-decoration: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 450px) {
+      padding-left: 20px;
+      .countryGroupWrapperM .countryGroupM {
+        p {
+          font-size: 5vw;
+        }
+        .countryGroupListM a p {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}

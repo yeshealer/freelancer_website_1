@@ -1,0 +1,119 @@
+@mixin iconGenerator($iconURL, $width, $height) {
+  min-width: $width;
+  height: $height;
+  display: inline-block;
+  vertical-align: middle;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url($iconURL) no-repeat;
+  background-position: center;
+}
+
+.plus-img-icon {
+  @include iconGenerator("/assets/svg/add-white.svg", 14px, 14px);
+}
+
+.deep-dive-icon {
+  @include iconGenerator("/assets/svg/deep-dive-white.svg", 24px, 24px);
+
+}
+
+.menuItemM:hover {
+  .kpi-icon {
+    @include iconGenerator("/assets/svg/KPI-green.svg", 32px, 32px);
+  }
+  .ranking-img-icon {
+    @include iconGenerator("/assets/svg/world-ranking-green.svg", 32px, 32px);
+  }
+  .compare-img-icon {
+    @include iconGenerator("/assets/svg/compare-green.svg", 32px, 32px);
+  }
+  .search-img-icon {
+    @include iconGenerator("/assets/svg/search-green.svg", 32px, 32px);
+  }
+}
+
+.kpi-icon {
+  @include iconGenerator("/assets/svg/KPI-white.svg", 32px, 32px);
+  &.activeIconM {
+    @include iconGenerator("/assets/svg/KPI-green.svg", 32px, 32px);
+  }
+}
+
+.cross-img-icon {
+  @include iconGenerator("/assets/svg/close-panel-white.svg", 14px, 14px);
+}
+
+.exit-img-icon {
+  cursor: pointer;
+  @include iconGenerator("/assets/svg/close-panel-white.svg", 22px, 22px);
+}
+
+.exit-img-icon-modal,
+.exit-img-icon-desktop,
+.exit-img-icon-menu {
+  cursor: pointer;
+  @include iconGenerator("/assets/svg/close-panel-white.svg", 18px, 18px);
+}
+
+.back-img-icon {
+  @include iconGenerator("/assets/svg/back-arrow-white.svg", 26px, 26px);
+}
+
+.check-img-icon {
+  @include iconGenerator("/assets/svg/checkmark-green.svg", 18px, 18px);
+}
+
+.pillar-img-icon {
+  @include iconGenerator("/assets/svg/pillars-white.svg", 24px, 24px);
+  &.activeIconM {
+    @include iconGenerator("/assets/svg/pillars-green.svg", 24px, 24px);
+  }
+}
+
+.ranking-img-icon {
+  @include iconGenerator("/assets/svg/world-ranking-white.svg", 32px, 32px);
+  &.activeIconM {
+    @include iconGenerator("/assets/svg/world-ranking-green.svg", 32px, 32px);
+  }
+}
+
+.compare-img-icon {
+  @include iconGenerator("/assets/svg/compare-white.svg", 32px, 32px);
+  &.activeIconM {
+    @include iconGenerator("/assets/svg/compare-green.svg", 32px, 32px);
+  }
+}
+
+.search-img-icon {
+  @include iconGenerator("/assets/svg/search-white.svg", 32px, 32px);
+  &.activeIconM {
+    @include iconGenerator("/assets/svg/search-green.svg", 32px, 32px);
+  }
+}
+
+.search-img-icon-mini {
+  @include iconGenerator("/assets/svg/search-white.svg", 22px, 22px);
+}
+
+.about-img-icon {
+  @include iconGenerator("/assets/svg/about-white.svg", 18px, 18px);
+}
+
+.about-img-icon-24 {
+  @include iconGenerator("/assets/svg/about-white.svg", 24px, 24px);
+}
+
+.mail-icon-24 {
+  @include iconGenerator("/assets/svg/mail.svg", 32px, 24px);
+}
+
+.download-icon {
+  @include iconGenerator("/assets/svg/download-white.svg", 30px, 30px);
+}
+
+.menu-icon {
+  @include iconGenerator("/assets/svg/menu-white.svg", 48px, 40px);
+  margin: 0 20px;
+}

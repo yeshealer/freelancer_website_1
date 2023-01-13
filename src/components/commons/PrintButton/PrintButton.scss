@@ -1,0 +1,24 @@
+@mixin iconGenerator($iconURL, $width, $height) {
+  min-width: $width;
+  height: $height;
+  display: inline-block;
+  vertical-align: middle;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url($iconURL) no-repeat;
+  background-position: center;
+}
+
+.printButton {
+  cursor: pointer;
+  @include iconGenerator("/assets/svg/printer-white.svg", 30px, 30px);
+  &:hover {
+   cursor: pointer; 
+   @include iconGenerator("/assets/svg/printer-green.svg", 30px, 30px);
+  }
+
+  img {
+    height: 23px !important;
+  }
+}

@@ -1,0 +1,82 @@
+
+
+@media print{
+    *, :after, :before {
+        color:#fff !important;        
+    }
+    body, .country-profile-page{
+        background: #000 !important;
+        -webkit-print-color-adjust: exact;
+    }
+    a[href]:after {
+        content:"" !important;
+     }
+
+     .category-panel-wrapper{
+         display:none;
+     }
+     .navigation{
+         display:none;
+     }
+
+    .right-section .card-wrapper{
+       width: 50% !important;
+      
+   }
+   .country-profile-page .graph-card.card-type-2{
+       background-color: #374464 !important;
+   }
+   .country-profile-page .graph-card.card-type-2 .graph-card-title{
+           background-color: #202941 !important;
+   }
+   .country-profile-page .country-profile-header{
+           background: url(/assets/images/country-profile-header@2x.png) !important;
+   }   
+   .country-profile-desktop .filter{/*        page-break-inside: avoid; *//*        page-break-before: always; *//* page-break-after: always; */display: block;page-break-before: always;}
+   html[dir=ltr] .country-profile-page .country-profile-content .right-section.sticky-panel-open{
+       margin-left:0 !important;
+   }
+ 
+    .kpi-container > div {
+         page-break-inside: avoid;
+    }
+
+
+    .fullScreenModal.Stats-Table.desktopModeModal {
+        background:#222 !important;
+        top: 0 important;
+        left: 0 important;
+        position: absolute important;
+        z-index: 99;
+        background: #222 !important;
+        width: 100% important;
+        height: 100% important;
+        padding: 5vh 0 important;
+        color: #fff important;
+    
+    }
+    
+    .fullScreenModal .modalHeaderM .titleM{
+        color:#ffffff !important;
+    }
+    
+    .fullScreenModal .modalHeaderM .subTitleM{
+        color:#ffffff !important;
+        opacity:1 !important;
+    }
+    
+    .footer-graphs{
+        position: fixed !important;
+        height: 50px !important;
+        bottom: 0 !important;  
+        width: 100% !important;
+        background: #000 !important;
+    }
+    
+    .desktopModeModal .graphStatContent .scrollContentGraph{
+        height:100% !important;
+    }
+
+}
+
+

@@ -1,0 +1,116 @@
+$pillar-panel-width-open: 25vw;
+$pillar-panel-width-closed: 60px;
+
+@import "style/mapglyphs";
+@import "style/layout";
+@import "style/navigation";
+@import "style/country-section";
+@import "style/graph-card";
+@import "style/categories";
+@import "style/filters";
+@import "style/select";
+@import "style/searchComponent";
+// @import "style/sideMenu";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.carousel-container{
+  .card-wrapper{
+    width: 100% !important;
+  }
+}
+
+.country-profile-page {
+  .clear-navigation {
+    background-color: transparent;
+  }
+
+  .back-button {
+    img {
+      width: 24px;
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .country-profile-page {
+    .back-button {
+      img{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.tab-list {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+
+.loadingOverlayM_single { 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  background: #222222;
+  z-index: 9999;
+  display: table;
+
+  &.mobileModeOverlay {
+    background: rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .loadingContentWrapper {
+    font-size: 14px;
+    width: 300px;
+    margin: 30% auto;
+    background-color: transparent;
+    display: table-cell;
+    vertical-align: middle;
+    img {
+      width: 50px;
+    }
+    .loadingContentM {
+      text-align: center;
+      padding: 20px;
+      color: #c5c5c5;
+      .loadingTitleM {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.carousel__back-button, .carousel__next-button {
+  border: none;
+  background: transparent;
+}
+
+.backBtn {
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      left: 0px;
+}
+
+.nextBtn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 0px;
+}

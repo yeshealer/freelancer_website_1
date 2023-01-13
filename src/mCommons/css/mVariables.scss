@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Etelka-Light;
+  src: url("/assets/fonts/Etelka-Light-Pro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Etelka-Medium;
+  src: url("/assets/fonts/Etelka-Medium-Pro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Etelka-Text-Pro;
+  src: url("/assets/fonts/Etelka-Text-Pro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Etelka-Text-Pro-B;
+  src: url("/assets/fonts/Etelka-Text-Pro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: ITCHandel;
+  src: url("/assets/fonts/ITC-Handel-Gothic-Arabic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: ITCHandel-Medium;
+  src: url("/assets/fonts/ITC-Handel-Gothic-Arabic-Medium.otf") format("opentype");
+}
+
+$primary-purple: #211A32;
+$primary-gray: #efeeec;
+$primary-dark-gray: #cacaca;
+$text-light: #fff;
+$text-gray: #949494;
+$text-lightGreen: #01ae84;
+$text-green: #00b186;
+
+$input-light: #fff;
+$button-lightGreen: #01ae84;
+
+$grid-first: #084442;
+$grid-second: #16081e;
+$grid-third: #361935;
+$grid-forth: #181823;
+$grid-fifth: #3f0a27;
+$grid-sixth: #150e19;
+
+@mixin backgroundSize($size) {
+  -webkit-background-size: ($size);
+  -moz-background-size: ($size);
+  -o-background-size: ($size);
+  background-size: ($size);
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin placeholder($color, $weight) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-weight: $weight;
+  }
+}
+@mixin transition($element, $property, $time) {
+  -webkit-transition: $element $property $time;
+  -moz-transition: $element $property $time;
+  -o-transition: $element $property $time;
+  transition: $element $property $time;
+}
+@mixin gradient($orientation, $first, $second) {
+  background: $first;
+  background: -moz-linear-gradient($orientation, $first 0%, $second 100%);
+  background: -webkit-linear-gradient($orientation, $first 0%, $second 100%);
+  background: linear-gradient($orientation, $first 0%, $second 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first', endColorstr='$second',GradientType=1 );
+}
+@mixin pre-wrap () {
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+@mixin column-count ($count){
+  column-count: $count;
+  -webkit-column-count: $count;
+  -moz-column-count: $count;
+}
+@mixin box-shadow($option1, $option2) {
+  -webkit-box-shadow: $option1, $option2;
+  -moz-box-shadow: $option1, $option2;
+  box-shadow: $option1, $option2;
+}

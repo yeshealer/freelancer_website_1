@@ -1,0 +1,57 @@
+.flexBoxParent
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */
+}
+
+.flexBoxModalHeaderBar{
+  min-height: 100px;
+}
+
+.flexBoxSearchingBar{
+  min-height: 50px;
+}
+
+.flexBoxButtonBar{
+  min-height: 100px;
+}
+
+.flexBoxPillarsBar{
+  min-height: 170px;
+}
+
+.flexBoxItem
+{
+
+}
+
+.flexBoxItemGrow
+{
+  flex: 1; /* same as flex: 1 1 auto; */
+}
+
+.flexBoxFillArea
+{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */
+}
+
+.flexBoxFillAreaCol
+{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */
+}

@@ -1,0 +1,48 @@
+.country-profile-page {
+  .iph-select {
+    position: relative;
+    display: inline-block;
+    select {
+      font-size: 16px;
+      background-color: #161126;
+      border: 0;
+      color: #fff;
+      height: 36px;
+      outline: 0;
+      -webkit-appearance: none;
+    }
+    >img{
+      width: 24px;
+      position: absolute;
+      top: 8px;
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .country-profile-page {
+    .iph-select {
+      select {
+        padding: 8px 10px 8px 60px;
+      }
+
+      >img{
+        left: 10px;
+      }
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .country-profile-page {
+    .iph-select {
+      select {
+        padding: 8px 60px 8px 10px;
+      }
+
+      >img{
+        right: 10px;
+      }
+    }
+  }
+}

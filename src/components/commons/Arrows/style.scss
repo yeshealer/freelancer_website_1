@@ -1,0 +1,17 @@
+.kpi-slider-next {
+  display: block;
+  position: absolute;
+  right: -20px;
+  //top: 7px;
+  top: calc(50% - 11px);
+  cursor: pointer;
+}
+
+.kpi-slider-prev {
+  display: block;
+  position: absolute;
+  left: -20px;
+  //top: 7px;
+  top: calc(50% - 11px);
+  cursor: pointer;
+}

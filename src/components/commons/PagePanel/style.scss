@@ -1,0 +1,423 @@
+.modalContentM {
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  .export-black-tootip {
+    //position: absolute;
+    //right: 60px;
+    //top: 37px;
+  }
+
+  width: 100%;
+  height: 100%;
+  z-index: 93;
+
+  .wrapperOfModalM {
+    height: 100%;
+  }
+
+  &.darkGreenGradientM {
+    background: #084442;
+    background: linear-gradient(45deg, #084442 0%, #16081e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#084442', endColorstr='#16081e', GradientType=1);
+  }
+
+  &.blueGradientM {
+    background: #0d1e2a;
+    background: linear-gradient(45deg, #194953 0%, #0d1e2a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#194953', endColorstr='#0d1e2a', GradientType=1);
+  }
+
+  &.greenGradientM {
+    background: #061d25;
+    background: linear-gradient(45deg, #174b47 0%, #061d25 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#174b47', endColorstr='#061d25', GradientType=1);
+  }
+
+  &.greenBlueGradientM {
+    background: #2c243a;
+    background: linear-gradient(45deg, #274155 0%, #2c243a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#274155', endColorstr='#2c243a', GradientType=1);
+  }
+
+  &.darkRedM {
+    background: rgb(63, 10, 39);
+    background: linear-gradient(45deg, rgba(63, 10, 39, 1) 1%, rgba(21, 14, 25, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f0a27', endColorstr='#150e19', GradientType=1);
+  }
+
+  .headerOfModalM {
+    //position: fixed;
+    //top: 0;
+    display: flex;
+    color: #fff;
+    padding: 35px 20px 11px 20px;
+
+
+    .mobileMenuIconM {
+      cursor: pointer;
+      display: flex;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      background: url("/assets/svg/menu-white.svg") no-repeat;
+      background-size: contain;
+      //margin-top: 4px;
+    }
+
+    .textContentM {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .titleM {
+        font-size: 24px;
+        > span {
+          font-size: 18px;
+        }
+      }
+
+      .subTitleM {
+        font-size: 14px;
+        opacity: 0.5;
+
+        //
+        //max-width: 100%;
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
+      }
+    }
+  }
+
+  .modalBodyM {
+    color: #fff;
+    padding: 10px 20px 0 20px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    &:last-child {
+      padding-bottom: 50px !important;
+    }
+
+    .compareCirclesM {
+      .compareCircleM {
+        height: 180px;
+        //width: 50%;
+        //float: left;
+        text-align: center;
+        //margin-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        .cpbM {
+          //padding: 0 25%;
+          .CircularProgressbar {
+            width: 86px !important;
+          }
+        }
+
+        .countryNameM {
+          margin-top: 10px;
+
+          > span {
+            margin: 0 4px;
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .smallSize {
+      .CircularProgressbar .CircularProgressbar-text {
+        font-size: 12px !important;
+      }
+    }
+
+    .addCountriesContainer {
+      text-align: center;
+      //width: 50%;
+      //float: left;
+      padding: 36px 0;
+    }
+
+    .modalCenterM {
+
+    }
+
+    .bodyTitleM {
+      text-align: center;
+      .sprite {
+        margin: 0 auto 0 auto;
+        //display: inline-block;
+      }
+
+      span {
+        //margin-left: 16px;
+        font-size: 22px;
+        //vertical-align: top;
+      }
+    }
+
+    .bodyTitle2M {
+      font-size: 18px;
+    }
+
+    .pillarBubblesM {
+      margin-top: 10px;
+      line-height: 40px;
+      > span {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        border-radius: 24px;
+        white-space: nowrap;
+
+        &.active {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+
+    .kpiListM {
+      .subPillarNameM {
+        color: #fff;
+        opacity: 0.4;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .kpiNameM {
+        color: #fff;
+        opacity: 0.7;
+        margin-bottom: 8px;
+        font-size: 14px;
+
+        .check-img-icon {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        &:hover,
+        &.active {
+          cursor: pointer;
+          color: #00b186;
+        }
+      }
+    }
+
+    .circularM {
+      width: 100%;
+      margin: 20px 0 0 0;
+      text-align: center;
+      > div {
+        display: inline-block;
+        width: 87px;
+      }
+    }
+
+    .bodySubTitleM {
+      text-align: center;
+    }
+
+    .kpiNameFieldM {
+      padding: 20px 0 0 0;
+    }
+
+    .worldRankDetailM {
+      padding: 10px 0;
+      //margin-top: 24px;
+      text-align: center;
+
+      > span {
+        //color: #365842;
+      }
+
+      //.rankDivM{
+      //	background-size: 100% 100%;
+      //	padding: 6px 8px 12px 8px;
+      //	font-size: 12px;
+      //	background-image: url("/assets/images/mScoreRect.png");
+      //	background-repeat: no-repeat;
+      //	text-align: center;
+      //	display: inline-block;
+      //}
+
+      .worldRankTextM {
+        margin-left: 12px;
+        padding-top: 6px;
+        display: inline-block;
+      }
+    }
+
+    .border1PXM {
+      width: 100%;
+      height: 1px;
+      background: #eee;
+      //margin: 30px 0;
+      opacity: 0.2;
+    }
+
+  }
+}
+
+// Mobile Mode
+.mobileMode{
+  &.showModal {
+    display: block;
+  }
+
+  &.hideModal {
+    display: none;
+  }
+}
+
+// Desktop Mode
+.desktopMode {
+  width: 450px;
+
+  .detailBlockM {
+    .detailTitleM {
+      font-size: 16px;
+    }
+    .detailTextM {
+      font-size: 12px !important;
+      opacity: .4 !important;
+      color: #fff !important;
+    }
+  }
+
+  .mobileMenuIconM {
+    display: none !important;
+  }
+
+  .wrapperOfModalM {
+    padding: 0 30px;
+
+    .titleM {
+      font-size: 32px !important;
+      > span {
+        font-size: 32px !important;
+      }
+    }
+  }
+
+  .headerOfModalM {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 30px !important;
+  }
+
+  .modalBodyM {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    .pillarBubblesM > span.active {
+      background: #00b186;
+    }
+  }
+
+  .countryNameM {
+    .cross-img-icon {
+      display: none;
+    }
+  }
+}
+
+html[dir='rtl'] {
+  .desktopMode {
+    left: 0 !important;
+    right: inherit;
+    transform: translateX(-100%);
+
+    &.showModal {
+      animation: slide-in-rtl 0.2s forwards;
+    }
+
+    &.hideModal {
+      animation: slide-out-rtl 0.2s forwards;
+    }
+  }
+
+  .modalContentM {
+    .headerOfModalM {
+      .mobileMenuIconM {
+        margin-left: 18px;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+    .modalBodyM {
+      .bodyTitleM {
+        span {
+          //margin-right: 16px;
+        }
+      }
+
+      .bodyTitle2M {
+        > i {
+          margin-right: 10px;
+        }
+      }
+      .worldRankDetailM {
+        .worldRankTextM {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+html[dir='ltr'] {
+  .desktopMode {
+    right: 0 !important;
+    left: inherit;
+    transform: translateX(100%);
+
+    &.showModal {
+      animation: slide-in 0.2s forwards;
+    }
+
+    &.hideModal {
+      overflow: hidden;
+      animation: slide-out 0.2s forwards;
+    }
+  }
+
+  .modalContentM {
+    .headerOfModalM {
+
+      .rightTopOptions {
+        //right: 60px !important;
+      }
+
+      .mobileMenuIconM {
+        margin-right: 18px;
+      }
+      i {
+        margin-left: 10px;
+      }
+    }
+    .modalBodyM {
+      .bodyTitleM {
+        span {
+          //margin-left: 16px;
+        }
+      }
+
+      .bodyTitle2M {
+        > i {
+          margin-left: 10px;
+        }
+      }
+      .worldRankDetailM {
+        .worldRankTextM {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
